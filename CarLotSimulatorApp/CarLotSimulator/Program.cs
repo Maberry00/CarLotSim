@@ -20,6 +20,8 @@ namespace CarLotSimulator
             jamesCar.HonkNoise = "puu";
             jamesCar.IsDrivable = true;
 
+            Console.WriteLine($"Number of Cars in the lot is: {CarLot.numberOfCars}");
+
             lot.Cars.Add(jamesCar);
 
             //Object Initializer Syntax
@@ -33,19 +35,22 @@ namespace CarLotSimulator
                 HonkNoise = "beep",
                 IsDrivable = true
             };
+            Console.WriteLine($"Number of Cars in the lot is: {CarLot.numberOfCars}");
+
 
             lot.Cars.Add(nicksCar);
 
             //Custom Constructor
 
             var dariusCar = new Car(2026, "Nissan", "Skyline", "zoom", "bipbop", false);
+            Console.WriteLine($"Number of Cars in the lot is: {CarLot.numberOfCars}");
 
             lot.Cars.Add(dariusCar);
 
             //methods
-            jamesCar.MakeEngineNoise(jamesCar.EngineNoise);
-            nicksCar.MakeEngineNoise(nicksCar.EngineNoise);
-            dariusCar.MakeEngineNoise(dariusCar.EngineNoise);
+            //jamesCar.MakeEngineNoise(jamesCar.EngineNoise);
+            //nicksCar.MakeEngineNoise(nicksCar.EngineNoise);
+            //dariusCar.MakeEngineNoise(dariusCar.EngineNoise);
 
             //*************BONUS*************//
 
@@ -60,6 +65,7 @@ namespace CarLotSimulator
                     $"Make: {car.Make} " +
                     $"Model: {car.Model}");
             }
+
         }
     }
 }
